@@ -7,6 +7,7 @@ import Explore from './Explore';
 import Cart from './Cart';
 import Favourite from './Favourite';
 import Account from './Account';
+import DetailItem from './DetailItem';
 
 export {
   Splash,
@@ -18,4 +19,5 @@ export {
   Cart,
   Favourite,
   Account,
+  DetailItem,
 };

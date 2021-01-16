@@ -1,18 +1,12 @@
 import React from 'react';
 import {Image, ScrollView, StyleSheet} from 'react-native';
 import {Banner} from '../../assets';
-import {
-  BestSelling,
-  ExclusiveOffer,
-  Gap,
-  Groceries,
-  Search,
-} from '../../components';
+import {BestSelling, ExclusiveOffer, Gap, Groceries} from '../../components';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
-    <ScrollView style={styles.container}>
-      <Search />
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      {/* <Search /> */}
       <Gap height={20} />
       <Image source={Banner} style={styles.banner} />
       <Gap height={20} />
@@ -21,6 +15,7 @@ const Home = () => {
       <BestSelling />
       <Gap height={20} />
       <Groceries />
+      <Gap height={115} />
     </ScrollView>
   );
 };
@@ -31,12 +26,11 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     flex: 1,
-    paddingVertical: 20,
   },
   banner: {
     width: '90%',
-    height: 114,
-    borderRadius: 15,
+    height: '10%',
     alignSelf: 'center',
+    borderRadius: 18,
   },
 });

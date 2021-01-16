@@ -11,6 +11,7 @@ import {
   Cart,
   Favourite,
   Account,
+  DetailItem,
 } from '../screens';
 import {BottomNavigator} from '../components';
 
@@ -55,6 +56,11 @@ const Router = () => {
       <Stack.Screen
         name="MainApp"
         component={MainApp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="DetailItem"
+        component={DetailItem}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

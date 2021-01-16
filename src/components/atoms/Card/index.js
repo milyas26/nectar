@@ -1,11 +1,15 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {Apple, IconAdd} from '../../../assets';
+import {IconAdd} from '../../../assets';
 import {fonts} from '../../../utils';
+import {useNavigation} from '@react-navigation/native';
 
 const Card = ({img, title, unit, price}) => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('DetailItem')}>
       <View style={styles.imgWrapper}>
         <Image source={img} style={styles.buah} />
       </View>
@@ -22,7 +26,7 @@ const Card = ({img, title, unit, price}) => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -38,6 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
     marginRight: 10,
+    marginLeft: 10,
   },
 
   imgWrapper: {

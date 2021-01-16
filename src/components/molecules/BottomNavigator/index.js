@@ -57,9 +57,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 30,
     paddingVertical: 16,
-    backgroundColor: '#e7e7e7',
     backgroundColor: '#fff',
-    borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
+    borderColor: '#FAF9F9',
+    borderWidth: 1,
   },
 });
